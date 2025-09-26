@@ -1,77 +1,74 @@
-# 🗄️ Elevate Labs – Data Analyst Internship (Task 4)
+# 🗄️ Elevate Labs – Data Analyst Internship (Task 4: SQL for Data Analysis)
 
-## 📌 Task 4: SQL for Data Analysis
-
-### 🎯 Objective
-To **use SQL queries** to extract, manipulate, and analyze structured data from a database.  
-This task focuses on applying **SQL concepts** such as filtering, joins, subqueries, aggregate functions, and query optimization.
+## 🎯 Objective
+To **use SQL queries** to extract, manipulate, and analyze structured data from an e-commerce database.  
+This task helps in practicing **real-world SQL operations** like filtering, aggregations, joins, subqueries, views, query optimization, and advanced analytics.
 
 ---
 
 ## 🛠 Tools Used
-- 🐬 MySQL *(primary tool used)*  
-- 🐘 PostgreSQL / 🗄️ SQLite *(alternatives if required)*  
-- 📂 Dataset: `Ecommerce_SQL_Database` (or any structured dataset of choice)  
+- 🐬 MySQL *(primary tool for database creation & queries)*  
+- 🐘 PostgreSQL / 🗄️ SQLite *(can also be used as alternatives)*  
+- 📂 Dataset: **Ecommerce SQL Database** (sample dataset created with users, products, orders, and order items)
 
 ---
 
-## 🗂 Steps Performed
-1. **Basic Data Extraction**  
-   - Used `SELECT`, `WHERE`, `ORDER BY` to filter and sort data.  
+## 🗂 Database Schema
+The project uses **4 main tables**:
 
-2. **Aggregations**  
-   - Applied `SUM`, `AVG`, `COUNT`, and `GROUP BY` for summary statistics.  
-
-3. **Joins**  
-   - Implemented `INNER JOIN`, `LEFT JOIN`, and `RIGHT JOIN` to combine tables.  
-
-4. **Subqueries**  
-   - Used nested queries to extract conditional insights.  
-
-5. **Views**  
-   - Created SQL views for reusable analysis.  
-
-6. **Optimization**  
-   - Checked query execution plans.  
-   - Used indexes where necessary to improve performance.  
+1. 👤 **Users** – customer info (id, name, email, age, country, registration date)  
+2. 📦 **Products** – product catalog (id, name, category, price, cost, stock)  
+3. 🛒 **Orders** – order transactions (id, user_id, order_date, total_amount, status, shipping cost)  
+4. 📑 **Order Items** – junction table linking orders & products (order_id, product_id, quantity, unit_price)  
 
 ---
 
-## 📂 Files in This Repository
-- 📄 `queries.sql` – Contains all SQL queries written for the task  
-- 📸 `screenshots/` – Screenshots of query outputs (results)  
-- 📝 `README.md` – Documentation (this file)  
-- 📂 `dataset/` – SQL dump or sample dataset (if allowed)  
+## 📝 Key Steps Performed
+
+### 🔹 Database Setup
+- Created schema with constraints (PK, FK, CHECK, INDEX).  
+- Inserted **sample data** for users, products, orders, and order items.  
+
+### 🔹 Core SQL Operations
+- `SELECT`, `WHERE`, `ORDER BY` for filtering.  
+- Aggregations with `SUM`, `AVG`, `COUNT`, `MIN`, `MAX`.  
+- Grouping with `GROUP BY` + filtering using `HAVING`.  
+
+### 🔹 Joins
+- `INNER JOIN`, `LEFT JOIN`, `RIGHT JOIN`, `CROSS JOIN`, and `SELF JOIN` examples.  
+- Combined user, order, and product details.  
+
+### 🔹 Subqueries
+- Scalar subqueries  
+- Correlated subqueries  
+- Nested table subqueries  
+- `EXISTS` and `NOT EXISTS` conditions  
+
+### 🔹 Views
+- Created a **Customer Summary View** (with total orders, total spent, avg order value, customer tier like *VIP/Regular/Inactive*).  
+
+### 🔹 Query Optimization
+- Added **indexes** on `orders(order_date, user_id)` and other frequently queried columns.  
+- Used `EXPLAIN` to analyze query performance.  
+- Replaced `IN` with `EXISTS` for efficiency.  
+
+### 🔹 Advanced Analysis
+- **RFM Analysis** (Recency, Frequency, Monetary) for customer segmentation.  
+- **Product Performance Analysis** with revenue, profit, and profit margins.  
+- **Monthly Growth Analysis** with percentage growth using `LAG()`.  
+- **Geographic Analysis** of revenue and users by country.  
+- **Window Functions**: Running totals, moving averages, ranking customers by spending.  
 
 ---
+
 
 ## ✅ Outcome
-- Learned how to **query structured data** using SQL.  
-- Gained practical experience with **joins, subqueries, and aggregations**.  
-- Improved ability to **analyze business metrics** (e.g., revenue, user activity).  
-- Built skills in **query optimization and performance tuning**.  
+- Built a **complete SQL project** for an e-commerce scenario.  
+- Practiced **end-to-end SQL skills**: database design, data cleaning, query writing, optimization, and analytics.  
+- Strengthened ability to **analyze structured data** and extract meaningful insights.  
+- Prepared for **SQL interview questions** with practical examples.  
 
 ---
 
-## 🎤 Interview Prep Questions
-1. What is the difference between `WHERE` and `HAVING`?  
-2. What are the different types of joins?  
-3. How do you calculate **average revenue per user (ARPU)** in SQL?  
-4. What are subqueries?  
-5. How do you optimize a SQL query?  
-6. What is a view in SQL?  
-7. How would you handle **NULL values** in SQL?  
 
----
-
-## 📌 Submission Guidelines Recap
-- ⏰ Complete between **10:00 AM – 10:00 PM**  
-- 🔍 Self-research is encouraged  
-- 🛠 Debug errors yourself to learn problem-solving  
-- 💸 No paid tools – only free alternatives  
-- 📂 Upload everything (queries, dataset, screenshots, README) to this repo  
-- 📤 Submit the GitHub link via the provided submission form  
-
----
-
-✨ This task helped me strengthen my **SQL query writing and data analysis skills**, which are essential for every Data Analyst role.  
+✨ This project demonstrates strong SQL skills for **real-world business analysis** and serves as a solid foundation for advanced data analytics tasks.  
